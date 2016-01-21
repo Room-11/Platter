@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(rgba(94,94,94,.2),rgba(94,94,94,.3)),#7ED321;
+}
+
+form {
+    width: 280px;
+    margin: 250px auto 0;
+}
+
+.form-control {
+    display: block;
+    width: 280px;
+    height: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    width: 280px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    padding: 10px 16px;
+    font-size: 18px;
+    color: #ffffff;
+}

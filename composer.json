@@ -1,0 +1,25 @@
+{
+    "name": "room11/platter",
+    "description": "Chat bot frontend",
+    "keywords": ["bot", "chat"],
+    "homepage": "https://github.com/Room-11/Platter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pieter Hordijk",
+            "email": "info@pieterhordijk.com",
+            "homepage": "https://pieterhordijk.com",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Room11\\Platter\\": "src/"}
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7",
+        "amphp/aerys": "dev-master",
+        "codecollab/template": "dev-master"
+    }
+}
