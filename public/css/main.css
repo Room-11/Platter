@@ -64,3 +64,31 @@ form.login button[type="submit"] {
     color: #ffffff;
     width: 100%;
 }
+
+.auth-loader {
+    max-width: 680px;
+    margin: 250px auto 0;
+}
+
+.auth-loader h1 {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.auth-loader p {
+    font-size: 36px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+
+.auth-loader p code {
+    background: #ffffff;
+    border-radius: 4px;
+    color: #333333;
+    padding-left: 10px;
+    padding-right: 10px;
+}

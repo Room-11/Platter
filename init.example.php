@@ -10,3 +10,12 @@ const AERYS_OPTIONS = [];
 $hosts = [
     'localhost' => ['*', 8080],
 ];
+
+/**
+ * Hardcoded list of administrators
+ *
+ * This will be based on the bot itself later
+ */
+$administrators = [
+    508666,
+];
