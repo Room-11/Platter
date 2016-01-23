@@ -14,13 +14,24 @@ class Authentication
         Request $request,
         Response $response,
         RequestCollection $authenticationRequests,
-        Html $template
+        Html $template,
+        array $allowedUsers
     ): \Generator
     {
         parse_str(yield $request->getBody(), $post);
 
+        if (empty($post['username']) || !in_array((int) $post['username'], $allowedUsers, true)) {
+            $response
+                ->setStatus(403)
+                ->setReason('Nope')
+                ->send($template->renderPage('/auth/not-allowed.phtml'))
+            ;
+
+            return;
+        }
+
         $authenticationRequests->add(new AuthenticationRequest((int) $post['username'], new \DateTimeImmutable()));
 
-        $response->send($template->renderPage('/awaiting-confirmation.phtml'));
+        $response->send($template->renderPage('/auth/awaiting-confirmation.phtml'));
     }
 }

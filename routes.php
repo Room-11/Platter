@@ -13,7 +13,7 @@ $router
     ->route('GET', '/', function(Request $request, Response $response) use ($template) {
         (new IndexController)->index($response, $template);
     })
-    ->route('POST', '/login', function(Request $request, Response $response) use ($requests, $template) {
-        yield from (new AuthenticationController)->logIn($request, $response, $requests, $template);
+    ->route('POST', '/login', function(Request $request, Response $response) use ($requests, $template, $administrators) {
+        yield from (new AuthenticationController)->logIn($request, $response, $requests, $template, $administrators);
     })
 ;

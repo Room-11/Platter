@@ -9,6 +9,6 @@ class Index
 {
     public function index(Response $response, Html $template)
     {
-        $response->send($template->renderPage('/login.phtml'));
+        $response->send($template->renderPage('/auth/login.phtml'));
     }
 }
